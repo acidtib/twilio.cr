@@ -30,7 +30,7 @@ TODO: Write usage instructions here
 
 - [x] Client
 
-##### Messaging
+##### Messages
 
 - [x] Create a message
 
