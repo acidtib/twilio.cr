@@ -1,6 +1,6 @@
-# twilio
+# twilio.cr
 
-TODO: Write a description here
+Twilio API wrapper for Crystal.
 
 ## Installation
 
@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      twilio:
-       github: your-github-user/twilio
+       github: arubinofaux/twilio
    ```
 
 2. Run `shards install`
@@ -22,13 +22,49 @@ require "twilio"
 
 TODO: Write usage instructions here
 
+## Progress
+
+### API methods
+
+#### Core
+
+- [x] Client
+
+##### Messaging
+
+- [x] Create a message
+
+- [x] Fetch a message
+
+- [x] Read multiple messages 
+
+- [ ] Update a message
+
+- [ ] Delete a message
+
+##### Calls
+
+- [ ] Create a call
+
+- [ ] Fetch a call
+
+- [ ] Fetch call recordings
+
+- [ ] Fetch call feedback
+
+- [ ] Read multiple calls
+
+- [ ] Update a call
+
+- [ ] Delete a call
+
 ## Development
 
 TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/twilio/fork>)
+1. Fork it (<https://github.com/arubinofaux/twilio.cr/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +72,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [arubinofaux](https://github.com/your-github-user) - creator and maintainer
+- [arubinofaux](https://github.com/arubinofaux) - creator and maintainer
