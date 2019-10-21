@@ -1,0 +1,9 @@
+name: twilio
+version: 0.1.0
+
+authors:
+  - arubinofaux <arubinofaux@gmail.com>
+
+crystal: 0.31.1
+
+license: MIT
