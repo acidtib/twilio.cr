@@ -9,7 +9,7 @@ Twilio API wrapper for Crystal.
    ```yaml
    dependencies:
      twilio:
-       github: arubinofaux/twilio
+       github: arubinofaux/twilio.cr
    ```
 
 2. Run `shards install`
