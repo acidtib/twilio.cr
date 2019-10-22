@@ -101,7 +101,9 @@ client.messages.fetch(message_sid)
 
 ## Development
 
-TODO: Write development instructions here
+For development, you will need API Credentials from Twilio. You can find instructions on how to acquire one for your account [here](https://www.twilio.com/docs/usage/your-request-to-twilio).
+
+If you found a bug in the library or would like new features added, go ahead and open issues or pull requests against this repo!
 
 ## Contributing
 
