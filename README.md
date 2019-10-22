@@ -38,9 +38,9 @@ TODO: Write usage instructions here
 
 - [x] Read multiple messages 
 
-- [ ] Update a message
+- [x] Update a message
 
-- [ ] Delete a message
+- [x] Delete a message
 
 ##### Calls
 
