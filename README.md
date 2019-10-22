@@ -1,4 +1,5 @@
 # twilio.cr
+[![Build Status](https://travis-ci.org/arubinofaux/twilio.cr.svg?branch=master)](https://travis-ci.org/arubinofaux/twilio.cr)
 
 Twilio API wrapper for Crystal.
 
