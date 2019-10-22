@@ -10,5 +10,9 @@ module Twilio
     def messages
       @messages ||= Api::Messages.new(@http_client, @account_sid)
     end
+
+    def calls
+      @calls ||= Api::Calls.new(@http_client, @account_sid)
+    end
   end
 end
