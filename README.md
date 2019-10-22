@@ -16,11 +16,42 @@ Twilio API wrapper for Crystal.
 
 ## Usage
 
+#### Setup Work
+
 ```crystal
-require "twilio"
+require 'twilio'
+
+# put your own credentials here
+account_sid = 'ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+auth_token = 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
+
+# set up a client to talk to the Twilio API
+client = Twilio::Client.new(account_sid, auth_token)
 ```
 
-TODO: Write usage instructions here
+#### Send an SMS
+
+```crystal
+client.messages.create(
+  from: '+14159341234',
+  to: '+16105557069',
+  body: 'Hey there!'
+)
+```
+
+#### List your Messages
+
+```crystal
+client.messages.list(limit: "20")
+```
+
+#### Fetch a single message by sid
+
+```crystal
+# put the message sid you want to retrieve here:
+message_sid = 'SMxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+client.messages.fetch(message_sid)
+```
 
 ## Progress
 
