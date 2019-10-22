@@ -6,7 +6,7 @@ auth_token = ENV["TWILIO_AUTH_TOKEN"]
 client = Twilio::Client.new(account_sid, auth_token)
 
 # test number 15005550006
-message = client.messages.create("+15005550006", "+15005550006", "Hey there!")
+message = client.messages.create(from: "+15005550006", to: "+15005550006", body: "Hey there!")
 
 puts message["sid"]
 

@@ -1,10 +1,10 @@
 module Twilio
   class Api::Messages < Api
-    def create(from, to, message)
+    def create(from=nil, to=nil, body=nil)
       response = @http_client.post("/2010-04-01/Accounts/#{@account_sid}/Messages.json", form: {
-            "To"   => to,
-            "From" => from,
-            "Body" => message
+        "To"   => to,
+        "From" => from,
+        "Body" => body
       })
 
       handleResponse(response)
