@@ -1,6 +1,10 @@
-language: crystal
-
-# Uncomment the following if you'd like Travis to run specs and check code formatting
-# script:
-#   - crystal spec
-#   - crystal tool format --check
+dist: xenial
+language: generic
+sudo: required
+services:
+  - docker
+before_install:
+  - docker pull crystallang/crystal:nightly
+script:
+  - docker run -v ${PWD}:/x -w /x crystallang/crystal:nightly bash -c "/usr/bin/shards install"
+  - docker run -v ${PWD}:/x -w /x crystallang/crystal:nightly bash -c "/usr/bin/crystal spec"
