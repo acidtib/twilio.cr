@@ -4,6 +4,9 @@ version: 0.1.0
 authors:
   - arubinofaux <arubinofaux@gmail.com>
 
+description: |
+  Twilio API wrapper for Crystal.
+
 crystal: 0.31.1
 
 license: MIT

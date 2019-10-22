@@ -1,8 +1,6 @@
 module Twilio
   class Api
-
     def initialize(@http_client : HTTP::Client, @account_sid : String)
-      
     end
 
     def handleResponse(response : HTTP::Client::Response)

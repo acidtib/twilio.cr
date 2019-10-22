@@ -1,6 +1,6 @@
 module Twilio
   class Api::Calls < Api
-    def create(from=nil, to=nil, url=nil, applicationSid=nil, method=nil, fallbackUrl=nil, fallbackMethod=nil, statusCallback=nil, statusCallbackEvent=nil, statusCallbackMethod=nil, sendDigits=nil, timeout=nil, record=nil, recordingChannels=nil, recordingStatusCallback=nil, recordingStatusCallbackMethod=nil, recordingStatusCallbackEvent=nil, sipAuthUsername=nil, sipAuthPassword=nil, trim=nil, callerId=nil, machineDetection=nil, machineDetectionTimeout=nil, machineDetectionSpeechThreshold=nil, machineDetectionSpeechEndThreshold=nil, machineDetectionSilenceTimeout=nil)
+    def create(from = nil, to = nil, url = nil, applicationSid = nil, method = nil, fallbackUrl = nil, fallbackMethod = nil, statusCallback = nil, statusCallbackEvent = nil, statusCallbackMethod = nil, sendDigits = nil, timeout = nil, record = nil, recordingChannels = nil, recordingStatusCallback = nil, recordingStatusCallbackMethod = nil, recordingStatusCallbackEvent = nil, sipAuthUsername = nil, sipAuthPassword = nil, trim = nil, callerId = nil, machineDetection = nil, machineDetectionTimeout = nil, machineDetectionSpeechThreshold = nil, machineDetectionSpeechEndThreshold = nil, machineDetectionSilenceTimeout = nil)
       params = Hash(String, String).new
       params["To"] = to
       params["From"] = from
@@ -28,19 +28,19 @@ module Twilio
       params["MachineDetectionSpeechThreshold"] = machineDetectionSpeechThreshold if machineDetectionSpeechThreshold
       params["MachineDetectionSpeechEndThreshold"] = machineDetectionSpeechEndThreshold if machineDetectionSpeechEndThreshold
       params["MachineDetectionSilenceTimeout"] = machineDetectionSilenceTimeout if machineDetectionSilenceTimeout
-      
+
       response = @http_client.post("/2010-04-01/Accounts/#{@account_sid}/Calls.json", form: params)
 
       handleResponse(response)
     end
 
-    def fetch(sid=nil)
+    def fetch(sid = nil)
       response = @http_client.get("/2010-04-01/Accounts/#{@account_sid}/Calls/#{sid}.json")
 
       handleResponse(response)
     end
 
-    def update(sid=nil, url=nil, method=nil, status=nil, fallbackUrl=nil, fallbackMethod=nil, statusCallback=nil, statusCallbackMethod=nil, twiml=nil)
+    def update(sid = nil, url = nil, method = nil, status = nil, fallbackUrl = nil, fallbackMethod = nil, statusCallback = nil, statusCallbackMethod = nil, twiml = nil)
       params = Hash(String, String).new
       params["Url"] = url if url
       params["Method"] = method if method
@@ -56,11 +56,11 @@ module Twilio
       handleResponse(response)
     end
 
-    def delete(sid=nil)
+    def delete(sid = nil)
       @http_client.delete("/2010-04-01/Accounts/#{@account_sid}/Calls/#{sid}.json")
     end
 
-    def delete(sid=nil)
+    def delete(sid = nil)
       @http_client.delete("/2010-04-01/Accounts/#{@account_sid}/Calls/#{sid}.json")
     end
   end

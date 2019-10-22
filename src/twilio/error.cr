@@ -1,6 +1,5 @@
 module Twilio
   class Error < Exception
-
     class Mapping
       JSON.mapping(
         message: String,

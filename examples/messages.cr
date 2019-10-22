@@ -14,12 +14,12 @@ fetchMessage = client.messages.fetch(message["sid"])
 
 puts fetchMessage
 
-# sleep to prevent,  
+# sleep to prevent,
 # Cannot delete message because delivery has not been completed.
 sleep(5)
-redactMessage = client.messages.update(message["sid"]) 
+redactMessage = client.messages.update(message["sid"])
 
 puts redactMessage
 
 sleep(1)
-client.messages.delete(message["sid"]) 
+client.messages.delete(message["sid"])
