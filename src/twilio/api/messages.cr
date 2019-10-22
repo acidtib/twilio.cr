@@ -7,13 +7,13 @@ module Twilio
             "Body" => message
       })
 
-      handle_response(response)
+      handleResponse(response)
     end
 
-    def fetch(sid)
+    def fetch(sid=nil)
       response = @http_client.get("/2010-04-01/Accounts/#{@account_sid}/Messages/#{sid}.json")
 
-      handle_response(response)
+      handleResponse(response)
     end
 
     def list(to=nil, from=nil, dateSent=nil, limit="20")
@@ -26,7 +26,19 @@ module Twilio
 
       response = @http_client.get("/2010-04-01/Accounts/#{@account_sid}/Messages.json?" + params)
       
-      handle_response(response)
+      handleResponse(response)
+    end
+
+    def update(sid=nil, body="")
+      response = @http_client.post("/2010-04-01/Accounts/#{@account_sid}/Messages/#{sid}.json", form: {
+        "Body" => body
+      })
+
+      handleResponse(response)
+    end
+
+    def delete(sid=nil)
+      @http_client.delete("/2010-04-01/Accounts/#{@account_sid}/Messages/#{sid}.json")
     end
   end
 end

@@ -5,7 +5,7 @@ module Twilio
       
     end
 
-    def handle_response(response : HTTP::Client::Response)
+    def handleResponse(response : HTTP::Client::Response)
       case response.status_code
       when 200..299
         JSON.parse(response.body)
