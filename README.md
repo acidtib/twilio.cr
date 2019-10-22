@@ -87,7 +87,7 @@ client.messages.fetch(message_sid)
 
 - [x] Create a call
 
-- [ ] Fetch a call
+- [x] Fetch a call
 
 - [ ] Fetch call recordings
 
@@ -95,9 +95,9 @@ client.messages.fetch(message_sid)
 
 - [ ] Read multiple calls
 
-- [ ] Update a call
+- [x] Update a call
 
-- [ ] Delete a call
+- [x] Delete a call
 
 ## Development
 
