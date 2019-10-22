@@ -1,6 +1,7 @@
 module Twilio
   class Client
     Host = URI.parse("https://api.twilio.com")
+    getter account_sid
 
     def initialize(@account_sid : String, auth_token)
       @http_client = HTTP::Client.new(Host)
