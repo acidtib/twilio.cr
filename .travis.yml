@@ -4,7 +4,7 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker pull crystallang/crystal:nightly
+  - docker pull crystallang/crystal:0.35.1
 script:
-  - docker run -v ${PWD}:/x -w /x crystallang/crystal:nightly bash -c "/usr/bin/shards install"
-  - docker run -v ${PWD}:/x -w /x crystallang/crystal:nightly bash -c "/usr/bin/crystal spec"
+  - docker run -v ${PWD}:/x -w /x crystallang/crystal:0.35.1 bash -c "/usr/bin/shards install"
+  - docker run -v ${PWD}:/x -w /x crystallang/crystal:0.35.1 bash -c "/usr/bin/crystal spec"
