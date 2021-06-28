@@ -1,10 +1,13 @@
 module Twilio
   class Error < Exception
     class Mapping
-      JSON.mapping(
-        message: String,
-        status: Int32
-      )
+      include JSON::Serializable
+
+      @[JSON::Field(key: "message")]
+      property message : String
+
+      @[JSON::Field(key: "status")]
+      property status : Int32
     end
   end
 end
