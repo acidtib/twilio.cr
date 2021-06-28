@@ -1,6 +1,6 @@
 module Twilio
   class Api::Calls < Api
-    def create(from = nil, to = nil, url = nil, applicationSid = nil, method = nil, fallbackUrl = nil, fallbackMethod = nil, statusCallback = nil, statusCallbackEvent = nil, statusCallbackMethod = nil, sendDigits = nil, timeout = nil, record = nil, recordingChannels = nil, recordingStatusCallback = nil, recordingStatusCallbackMethod = nil, recordingStatusCallbackEvent = nil, sipAuthUsername = nil, sipAuthPassword = nil, trim = nil, callerId = nil, machineDetection = nil, machineDetectionTimeout = nil, machineDetectionSpeechThreshold = nil, machineDetectionSpeechEndThreshold = nil, machineDetectionSilenceTimeout = nil)
+    def create(from = nil, to = nil, url = nil, applicationSid = nil, method = nil, fallbackUrl = nil, fallbackMethod = nil, statusCallback = nil, statusCallbackEvent = nil, statusCallbackMethod = nil, sendDigits = nil, timeout = nil, record = nil, recordingChannels = nil, recordingStatusCallback = nil, recordingStatusCallbackMethod = nil, recordingStatusCallbackEvent = nil, sipAuthUsername = nil, sipAuthPassword = nil, trim = nil, callerId = nil, machineDetection = nil, machineDetectionTimeout = nil, machineDetectionSpeechThreshold = nil, machineDetectionSpeechEndThreshold = nil, machineDetectionSilenceTimeout = nil, twiml = nil)
       params = Hash(String, String).new
       params["To"] = to
       params["From"] = from
@@ -28,6 +28,7 @@ module Twilio
       params["MachineDetectionSpeechThreshold"] = machineDetectionSpeechThreshold if machineDetectionSpeechThreshold
       params["MachineDetectionSpeechEndThreshold"] = machineDetectionSpeechEndThreshold if machineDetectionSpeechEndThreshold
       params["MachineDetectionSilenceTimeout"] = machineDetectionSilenceTimeout if machineDetectionSilenceTimeout
+      params["Twiml"] = twiml if twiml
 
       response = @http_client.post("/2010-04-01/Accounts/#{@account_sid}/Calls.json", form: params)
 
