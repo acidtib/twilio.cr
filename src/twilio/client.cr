@@ -10,6 +10,10 @@ module Twilio
       @http_client.basic_auth(account_sid, auth_token)
     end
 
+    def accounts
+      @accounts ||= Api::Accounts.new(@http_client, @account_sid)
+    end
+
     def messages
       @messages ||= Api::Messages.new(@http_client, @account_sid)
     end
