@@ -7,6 +7,10 @@ authors:
 description: |
   Twilio API wrapper for Crystal.
 
-crystal: 0.35.1
+crystal: 1.0.0
 
 license: MIT
+
+dependencies:
+  connect-proxy:
+    github: spider-gazelle/connect-proxy
