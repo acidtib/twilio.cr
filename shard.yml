@@ -1,5 +1,5 @@
 name: twilio
-version: 0.2.0
+version: 0.2.1
 
 authors:
   - arubinofaux <arubinofaux@gmail.com>
@@ -7,6 +7,6 @@ authors:
 description: |
   Twilio API wrapper for Crystal.
 
-crystal: 0.35.1
+crystal: ">= 0.35.1"
 
 license: MIT
