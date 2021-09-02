@@ -1,7 +1,11 @@
-language: crystal
+os:
+  - linux
 
-crystal:
-  - latest
-  
+services:
+  - docker
+
+before_install:
+  - docker pull crystallang/crystal:latest
+
 script:
-  - crystal spec
+  - docker run -v ${PWD}:/x -w /x crystallang/crystal:latest bash -c "/usr/bin/crystal spec"
