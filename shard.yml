@@ -7,6 +7,6 @@ authors:
 description: |
   Twilio API wrapper for Crystal.
 
-crystal: 0.35.1
+crystal: ">= 0.35.1"
 
 license: MIT
